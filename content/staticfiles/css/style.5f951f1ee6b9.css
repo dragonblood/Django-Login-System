@@ -1,8 +1,3 @@
-
-
-/* Please ❤ this if you like it! */
-
-
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
 
 /* #Primary
@@ -24,20 +19,13 @@ body{
 }
 ::selection {
 	color: #e0e0e0;
-	background-color: #a263ff;
+	background-color: #a96fff;
 }
 ::-moz-selection {
 	color: #e0e0e0;
-	background-color: #a263ff;
+	background-color: #a96fff;
 }
 
-h1{
-	font-size: 5em;
-}
-
-h4{
-	font-size: 2.5em;
-}
 
 /* #Navigation
 ================================================== */
@@ -128,7 +116,7 @@ h4{
     transition: all 200ms linear;
 }
 .nav-item:hover .nav-link{
-	color: #8167a9 !important;
+	color: #a96fff !important;
 }
 .nav-item.active .nav-link{
 	color: #777 !important;
@@ -138,18 +126,17 @@ h4{
 	padding: 5px 0 !important;
 	display: inline-block;
 }
-/*////////////////////////// HOVER UNSERLINE //////////////////////////////////////////////////*/
-/* .nav-item:after{
+.nav-item:after{
 	position: absolute;
 	bottom: -5px;
 	left: 0;
 	width: 100%;
 	height: 2px;
 	content: '';
-	background-color: #8167a9;
+	background-color: #a96fff;
 	opacity: 0;
     transition: all 200ms linear;
-} */
+}
 .nav-item:hover:after{
 	bottom: 0;
 	opacity: 1;
@@ -189,8 +176,138 @@ h4{
 	transform: translateY(-50%);
 	z-index: 20;
 }
-
-
+h1{
+	font-size: 48px;
+	line-height: 1.2;
+	font-weight: 700;
+	color: #212112;
+	text-align: center;
+}
+p{
+	text-align: center;
+	margin: 0;
+	padding-top: 10px;
+	opacity: 1;
+	transform: translate(0);
+    transition: all 300ms linear;
+    transition-delay: 1700ms;
+}
+body.hero-anime p{
+	opacity: 0;
+	transform: translateY(40px);
+    transition-delay: 1700ms;
+}
+h1 span{
+	display: inline-block;
+    transition: all 300ms linear;
+	opacity: 1;
+	transform: translate(0);
+}
+body.hero-anime h1 span:nth-child(1){
+	opacity: 0;
+	transform: translateY(-20px);
+}
+body.hero-anime h1 span:nth-child(2){
+	opacity: 0;
+	transform: translateY(-30px);
+}
+body.hero-anime h1 span:nth-child(3){
+	opacity: 0;
+	transform: translateY(-50px);
+}
+body.hero-anime h1 span:nth-child(4){
+	opacity: 0;
+	transform: translateY(-10px);
+}
+body.hero-anime h1 span:nth-child(5){
+	opacity: 0;
+	transform: translateY(-50px);
+}
+body.hero-anime h1 span:nth-child(6){
+	opacity: 0;
+	transform: translateY(-20px);
+}
+body.hero-anime h1 span:nth-child(7){
+	opacity: 0;
+	transform: translateY(-40px);
+}
+body.hero-anime h1 span:nth-child(8){
+	opacity: 0;
+	transform: translateY(-10px);
+}
+body.hero-anime h1 span:nth-child(9){
+	opacity: 0;
+	transform: translateY(-30px);
+}
+body.hero-anime h1 span:nth-child(10){
+	opacity: 0;
+	transform: translateY(-20px);
+}
+h1 span:nth-child(1){
+    transition-delay: 1000ms;
+}
+h1 span:nth-child(2){
+    transition-delay: 700ms;
+}
+h1 span:nth-child(3){
+    transition-delay: 900ms;
+}
+h1 span:nth-child(4){
+    transition-delay: 800ms;
+}
+h1 span:nth-child(5){
+    transition-delay: 1000ms;
+}
+h1 span:nth-child(6){
+    transition-delay: 700ms;
+}
+h1 span:nth-child(7){
+    transition-delay: 900ms;
+}
+h1 span:nth-child(8){
+    transition-delay: 800ms;
+}
+h1 span:nth-child(9){
+    transition-delay: 600ms;
+}
+h1 span:nth-child(10){
+    transition-delay: 700ms;
+}
+body.hero-anime h1 span:nth-child(11){
+	opacity: 0;
+	transform: translateY(30px);
+}
+body.hero-anime h1 span:nth-child(12){
+	opacity: 0;
+	transform: translateY(50px);
+}
+body.hero-anime h1 span:nth-child(13){
+	opacity: 0;
+	transform: translateY(20px);
+}
+body.hero-anime h1 span:nth-child(14){
+	opacity: 0;
+	transform: translateY(30px);
+}
+body.hero-anime h1 span:nth-child(15){
+	opacity: 0;
+	transform: translateY(50px);
+}
+h1 span:nth-child(11){
+    transition-delay: 1300ms;
+}
+h1 span:nth-child(12){
+    transition-delay: 1500ms;
+}
+h1 span:nth-child(13){
+    transition-delay: 1400ms;
+}
+h1 span:nth-child(14){
+    transition-delay: 1200ms;
+}
+h1 span:nth-child(15){
+    transition-delay: 1450ms;
+}
 #switch,
 #circle {
 	cursor: pointer;
@@ -200,19 +317,23 @@ h4{
 #switch {
 	width: 60px;
 	height: 8px;
-	border: 2px solid #8167a9;
+	border: 2px solid #a96fff;
 	border-radius: 27px;
 	background: #000;
 	position: relative;
 	display: block;
 	margin: 0 auto;
 	text-align: center;
-	/* opacity: 1;
+	opacity: 1;
 	transform: translate(0);
     transition: all 300ms linear;
-    transition-delay: 1900ms; */
+    transition-delay: 1900ms;
 }
-
+body.hero-anime #switch{
+	opacity: 0;
+	transform: translateY(40px);
+    transition-delay: 1900ms;
+}
 #circle {
 	position: absolute;
 	top: -11px;
@@ -224,7 +345,7 @@ h4{
 }
 .switched {
 	border-color: #000 !important;
-	background: #8167a9 !important;
+	background: #a96fff !important;
 }
 .switched #circle {
 	left: 43px;
@@ -277,7 +398,7 @@ h4{
 
 body.dark{
 	color: #e0e0e0;
-	background-color: #212121;
+	background-color: #1f2029;
 }
 body.dark .navbar-brand img{
   filter: brightness(100%);
@@ -309,7 +430,7 @@ body.dark .nav-item.active .nav-link{
 }
 body.dark .dropdown-menu {
 	color: #e0e0e0;
-	background-color: #212121;
+	background-color: #1f2029;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
 }
 body.dark .dropdown-item {
@@ -409,19 +530,110 @@ body.dark .logo img {
 }
 
 .card-body {
-    width: max-content;
+    max-width: max-content;
 	color: #212121;
 	border-radius: 33px;
 	background: #e0e0e0;
 	box-shadow:  14px 14px 23px #a4a4a4,
 				-14px -14px 23px #ffffff;
+	/* margin: 10% 1% 0 1%; */
 }
 
 body.dark .card-body {
-    width: max-content;
+    max-width: max-content;
 	color: #e0e0e0;
 	border-radius: 33px;
 	background: #212121;
 	box-shadow:  14px 14px 23px #181818,
 				 -14px -14px 23px #2a2a2a;
 }
+
+
+
+
+
+h1{
+	font-size:50px;
+}
+h4{
+	font-size:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+.dark-light:checked + label,
+.dark-light:not(:checked) + label{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 20000;
+  display: block;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  transition: all 200ms linear;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.45);
+}
+.dark-light:checked + label{
+  transform: rotate(360deg);
+}
+.dark-light:checked + label:after,
+.dark-light:not(:checked) + label:after{
+  position: absolute;
+  content: '';
+  overflow: hidden;
+  z-index: 2;
+  display: block;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: #2e2e2e;
+  background-image: url('https://raw.githubusercontent.com/dragonblood/Zero-Login-System/765b9fd2f41c67316c294a2494cdb20ede45434a/content/assets/img/moon.svg');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 200ms linear;
+  opacity: 0;
+}
+.dark-light:checked + label:after {
+  opacity: 1;
+}
+.dark-light:checked + label:before,
+.dark-light:not(:checked) + label:before{
+  position: absolute;
+  content: '';
+  overflow: hidden;
+  z-index: 1;
+  display: block;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  background-color: #f8fb48;
+  background-image: url('https://raw.githubusercontent.com/dragonblood/Zero-Login-System/765b9fd2f41c67316c294a2494cdb20ede45434a/content/assets/img/sun.svg');
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 200ms linear;
+}
+
+
+
+  

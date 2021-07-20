@@ -16,7 +16,7 @@ CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 SECRET_KEY = '3%)4ya)u3q4!b6gtu*gh(wxzz@0=vg^k=6b!$3jd5t)c4^*rbg'
 
 DEBUG = False
-ALLOWED_HOSTS = ['vipuldjangologin.herokuapp.com', 'login.vipulpetkar.ml']
+ALLOWED_HOSTS = ['vipuldjangologin.herokuapp.com', 'login.vipulpetkar.ml', '127.0.0.1']
 
 SITE_ID = 1
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

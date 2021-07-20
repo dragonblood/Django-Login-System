@@ -2,108 +2,110 @@
 
 <!DOCTYPE html>
 <html lang="{{ language_code }}">
+	<meta charset="utf-8">
 
-<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="An example of Django project with basic user functionality.">
 
-    <meta charset="utf-8">
+	<link rel="icon" href="{% static 'img/favicon.png' %}">
+	<title>Login</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="An example of Django project with basic user functionality.">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" rel="stylesheet">
 
-    <link rel="icon" href="{% static 'img/favicon.png' %}">
-
-    <title>Librus</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
-    <link href="{% static 'css/black-dashboard.css' %}" rel="stylesheet">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" rel="stylesheet">
-
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
+	<!-- Font Awesome JS -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
 
 
 </head>
 
-<body>
-    <div id="nav">
-        <!-- this file contain sidebar and top bar. Things that pop up after signing in.-->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark static-top">
-            &nbsp&nbsp {% if request.user.is_authenticated %}
-            <div>
-                <nav class="navbar navbar-expand-lg">
-                    <button class="bg-dark" id="sidebarCollapse">
-                        <b>&#9776;</b>
-                    </button>
-                </nav>
-            </div>
-            <div class="navbar-nav ml-auto">
-                <div class="nav-item">
-                    <a class="h3" href="{% url 'index' %}">{{ request.user.username }}&nbsp&nbsp</a>
-                    <button class="btn navbar-btn btn-primary" id="btn-logout">
-                        <a class="nav-link" href="{% url 'accounts:log_out' %}">{% trans 'Log out' %}</a>
-                    </button>
-                </div>
-            </div>
-            <nav id="sidebar">
-                <div id="dismiss">X</div>
-                <div class="sidebar-header">
-                    <h3>Explore <br>Projects</h3>
-                </div>
-                <ul class="list-unstyled components">
-                    <li class="active"><a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Projects</a>
-                        <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li class="h4"><a href="{% url 'Atlus' %}">{% trans 'Project Atlus' %}</a></li>
-                            <li class="h4"><a href="{% url 'Boomerang' %}">{% trans 'Project Boomerang' %}</a></li>
-                            <li class="h4"><a href="{% url 'Cataract' %}">{% trans 'Project Cataract' %}</a></li>
-                            <li class="h4"><a href="{% url 'Diclonius' %}">{% trans 'Project Diclonius' %}</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="http://vipulpetkar.ml/">{% trans 'About' %}</a></li>
-                    <li><a href="http://vipulpetkar.ml/">{% trans 'Portfolio' %}</a></li>
-                    <li><a href="http://vipulpetkar.ml/#Contact">{% trans 'Contact' %}</a></li>
-                    <li><a class="nav-link" href="{% url 'change_language' %}">{% trans 'Change language' %}</a></li>
-                </ul>
-            </nav>
-            {% else %}
-            <div class="nav-item">
-                <div>
-                    <button class="btn">
-                        <a class="nav-link" href="{% url 'accounts:log_in' %}">{% trans 'Log in' %}</a>
-                    </button>
-                    <button class="btn">
-                        <a class="nav-link" href="{% url 'accounts:sign_up' %}">{% trans 'Create an account' %}</a>
-                    </button>
-                </div>
-            </div>
+<body class="hero-anime">	
 
-            <div class="navbar-nav ml-auto">
-                <div class="nav-item">
-                    <h4><a class="nav-link" href="{% url 'change_language' %}">{% trans 'Change language' %}</a></h2>
-                </div>
-            </div>
-            {% endif %}
-        </nav>
-    </div>
+	<div class="navigation-wrap bg-light start-header start-style">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-md navbar-light">
 
-    <div class="container-fluid mt-3">
+						<div class="navbar-brand" id="switch">
+							<div id="circle"></div>
+						</div>
 
-        {% bootstrap_messages %} {% block content %} {% endblock %}
-        <div id="navbarr">
-            <p>Made By Dragonblood With ❤<br> Visit My Site <a href="http://Vipulpetkar.ml">Vipul petkar</a></p>
-        </div>
-    </div>
+						
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="{% static 'js/Script.js' %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js">
-    </script>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto py-4 py-md-0">
+								&nbsp&nbsp {% if request.user.is_authenticated %}
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Project Atlus</a>
+										<a class="dropdown-item" href="#">Project Boomerang</a>
+										<a class="dropdown-item" href="#">Project Caratact</a>
+										<a class="dropdown-item" href="#">Project Eridium</a>
+										<a class="dropdown-item" href="#">Project F</a>
+									</div>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ request.user.username }}</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="{% url 'accounts:change_email' %}">{% trans 'Change email' %}</a>
+										<a class="dropdown-item" href="{% url 'accounts:change_profile' %}">{% trans 'Change profile ' %}</a>
+										<a class="dropdown-item" href="{% url 'accounts:change_password' %}">{% trans 'Change password' %}</a>
+										<a class="dropdown-item" href="{% url 'accounts:log_out' %}">{% trans 'Log out' %}</a>
+									</div>
+								</li>
+								{% else %}
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="{% url 'accounts:sign_up' %}">{% trans 'Create an account' %}</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="{% url 'accounts:log_in' %}">{% trans 'Log in' %}</a>
+								</li>
+								{% endif %}
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="{% url 'change_language' %}">{% trans 'Change language' %}</a>
+								</li>
+							</ul>
+						</div>
+					</nav>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section full-height">
+		<div class="absolute-center">
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							{% bootstrap_messages %} {% block content %} {% endblock %}
+				<!-- <h1><span>B</span><span>o</span><span>o</span><span>t</span><span>s</span><span>t</span><span>r</span><span>a</span><span>p</span> <span>4</span><br>
+				<span>m</span><span>e</span><span>n</span><span>u</span></h1>
+				<p>scroll for nav animation</p>	 -->
+						</div>	
+					</div>		
+				</div>		
+			</div>
 
+		</div>
+	</div>
+	<div class="my-5 py-5">
+	</div>
+
+<!-- partial -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="{% static 'js/Script.js' %}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
 </body>
-
 </html>

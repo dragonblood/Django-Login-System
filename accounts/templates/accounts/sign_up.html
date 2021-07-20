@@ -4,8 +4,20 @@
 {% load i18n %}
 
 {% block content %}
+<div class="auth-bg">
+    <span class="r"></span>
+    <span class="r s"></span>
+    <span class="r s"></span>
+    <span class="r"></span>
+</div>
     <div class="center-vertical" id="login">
-        <form class="card card-body bg-dark" method="post">
+        <div class="auth-bg">
+            <span class="r"></span>
+            <span class="r s"></span>
+            <span class="r s"></span>
+            <span class="r"></span>
+        </div>
+        <form class="card card-body" method="post">
             <h4>{% trans 'Create an account' %}</h4>
 
                 {% csrf_token %}

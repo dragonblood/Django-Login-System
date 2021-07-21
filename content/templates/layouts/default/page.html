@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="An example of Django project with basic user functionality.">
 
-	<link rel="icon" href="{% static 'img/favicon.png' %}">
+	<!-- <link rel="icon" href="{% static 'img/favicon.png' %}"> -->
 	<title>Login</title>
 
 
@@ -72,6 +72,11 @@
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 									<a class="nav-link" href="{% url 'change_language' %}">{% trans 'Change language' %}</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="https://github.com/dragonblood/Zero-Login-System/issues">
+										<i class="fa fa-bug" aria-hidden="true"></i> Report an issue
+									</a>
 								</li>
 							</ul>
 						</div>

@@ -34,24 +34,29 @@
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul class="navbar-nav ml-auto py-4 py-md-0">
 								{% if request.user.is_authenticated %}
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="{% url 'Atlus' %}">Project Atlus</a>
-										<a class="dropdown-item" href="{% url 'Boomerang' %}">Project Boomerang</a>
-										<a class="dropdown-item" href="{% url 'Cataract' %}">Project Caratact</a>
-										<a class="dropdown-item" href="{% url 'index' %}">Project Eridium</a>
-										<a class="dropdown-item" href="{% url 'index' %}">Project F</a>
-									</div>
+								
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+									<a class="nav-link" href="{% url 'index' %}">Home</a>
 								</li>
 
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{% url 'index' %}" role="button" aria-haspopup="true" aria-expanded="false">{{ request.user.username }}</a>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ request.user.username }}</a>
 									<div class="dropdown-menu">
 										<a class="dropdown-item" href="{% url 'accounts:change_email' %}">{% trans 'Change email' %}</a>
 										<a class="dropdown-item" href="{% url 'accounts:change_profile' %}">{% trans 'Change profile ' %}</a>
 										<a class="dropdown-item" href="{% url 'accounts:change_password' %}">{% trans 'Change password' %}</a>
 										<a class="dropdown-item" href="{% url 'accounts:log_out' %}">{% trans 'Log out' %}</a>
+									</div>
+								</li>
+
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link dropdown-toggle font-weight-bold" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="http://atlus.vipulpetkar.ml/">Project Atlus</a>
+										<a class="dropdown-item" href="http://boomerang.vipulpetkar.ml/">Project Boomerang</a>
+										<a class="dropdown-item" href="https://cataract.azurewebsites.net/">Project Caratact</a>
+										<a class="dropdown-item" href="https://github.com/dragonblood/Eridium">Project Eridium</a>
+										<a class="dropdown-item" href="http://vipulpetkar.ml/F/">Project F</a>
 									</div>
 								</li>
 								{% else %}
@@ -62,6 +67,9 @@
 									<a class="nav-link" href="{% url 'accounts:log_in' %}">{% trans 'Log in' %}</a>
 								</li>
 								{% endif %}
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link font-weight-bold" href="http://vipulpetkar.ml">About Me</a>
+								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 									<a class="nav-link" href="{% url 'change_language' %}">{% trans 'Change language' %}</a>
 								</li>
@@ -93,13 +101,8 @@
 
 	<div class="light-back"></div> 
 <!-- partial -->
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

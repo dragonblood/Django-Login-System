@@ -119,7 +119,7 @@ body{
 	color: #a96fff !important;
 }
 .nav-item.active .nav-link{
-	color: #777 !important;
+	color: #a96fff !important;
 }
 .nav-link {
 	position: relative;
@@ -536,7 +536,6 @@ body.dark .logo img {
 	background: #e0e0e0;
 	box-shadow:  14px 14px 23px #a4a4a4,
 				-14px -14px 23px #ffffff;
-	/* margin: 10% 1% 0 1%; */
 }
 
 body.dark .card-body {
@@ -571,8 +570,8 @@ h4{
 
 
 
-[type="checkbox"]:checked,
-[type="checkbox"]:not(:checked){
+[id="dark-light"]:checked,
+[id="dark-light"]:not(:checked){
   position: absolute;
   left: -9999px;
   opacity: 0;

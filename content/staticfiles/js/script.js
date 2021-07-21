@@ -31,15 +31,20 @@
 	});	
 	
 	//Switch light/dark
-	
+	if (localStorage['theme'] == 'dark'){
+        $("body").addClass("dark");
+    }
+
 	$("#dark-light").on('click', function () {
 		if ($("body").hasClass("dark")) {
 			$("body").removeClass("dark");
 			$("#dark-light").removeClass("switched");
+            localStorage['theme'] = "bright";
 		}
 		else {
 			$("body").addClass("dark");
 			$("#dark-light").addClass("switched");
+            localStorage['theme'] = "dark";
 		}
 	});  
 	

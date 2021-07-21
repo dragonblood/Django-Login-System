@@ -16,12 +16,6 @@ urlpatterns = [
 
     path('i18n/', include('django.conf.urls.i18n')),
     path('language/', ChangeLanguageView.as_view(), name='change_language'),
-
-   
-    path('Atlus/', views.Atlus, name = 'Atlus'),
-    path('Boomerang/', views.Boomerang, name = 'Boomerang'),
-    path('Cataract/', views.Cataract, name = 'Cataract'),
-    path('Diclonius/', views.Diclonius, name = 'Diclonius'),
 ] 
 
 if settings.DEBUG:

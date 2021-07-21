@@ -15,8 +15,9 @@ CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '3%)4ya)u3q4!b6gtu*gh(wxzz@0=vg^k=6b!$3jd5t)c4^*rbg'
 
+
 DEBUG = False
-ALLOWED_HOSTS = ['vipuldjangologin.herokuapp.com', 'login.vipulpetkar.ml','localhost']
+ALLOWED_HOSTS = ['vipuldjangologin.herokuapp.com', 'login.vipulpetkar.ml', '127.0.0.1']
 
 SITE_ID = 1
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -137,7 +138,7 @@ LANGUAGE_CODE = 'en'
 TIME_ZONE = 'UTC'
 USE_TZ = True
 
-STATIC_ROOT = os.path.join(CONTENT_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(CONTENT_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(CONTENT_DIR, 'media')

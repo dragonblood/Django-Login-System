@@ -1,7 +1,7 @@
 # Zero: Login System [![Django CI](https://github.com/dragonblood/Zero-Login-System/actions/workflows/django.yml/badge.svg)](https://github.com/dragonblood/Zero-Login-System/actions/workflows/django.yml)
 ## 1. About:
 
-Simple and Beautiful Login system Built using Django, HTML and CSS.
+An Aweesome-looking WebApp built using the Django framework which uses machine learning (gradient boosted trees) trained using the Kaggle dataset to predict whether or not an employee needs mental health treatment. The frontend was developed using Bootstrap. Hosted using Salesforce Heroku.
 
 ## 2. Steps To Follow:
 ```

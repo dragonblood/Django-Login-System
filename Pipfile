@@ -6,15 +6,16 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django-bootstrap4 = "==1.1.1"
-psycopg2 = "==2.8.4"
-beautifulsoup4 = "==4.8.2"
-Django = "==3.0.14"
-gunicorn = "==20.0.4"
-asgiref = "==3.2.7"
-pytz = "==2019.3"
-soupsieve = "==2.0"
-sqlparse = "==0.3.1"
+django-bootstrap4 = "*"
+Django = "*"
+gunicorn = "*"
+beautifulsoup4 = "*"
+asgiref = "*"
+pytz = "*"
+soupsieve = "*"
+sqlparse = "*"
+psycopg2 = "*"
+whitenoise = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.11"
